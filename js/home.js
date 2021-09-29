@@ -6,6 +6,7 @@ $(document).ready(function(){
   $("#sentence").hide();
   $("#joke").hide();  
 })
+
 function delay(ms) {
   var cur_d = new Date();
   var cur_ticks = cur_d.getTime();
@@ -35,18 +36,18 @@ function req(n) {
   var da = {};
 
   for (var i = 0; i < $('#sub').val(); i += 1) {
-
-    da["entry.797566747"] = "Option 2";
-    da["entry.169556469"] = "b";
-    da["entry.1344162633"] = "69";
-    da["entry.165252303"] = "v4xBG";
+    
+    da["entry.1425257204"] = "No"; //Contacted?
+    da["entry.326955045"] = $('#box').val(); //Detailed Feedback
     i+=1;
-    da["entry.910209338"] = $('#box').val()+"A.H. att. "+i;
+    da["entry.485428648"] = "A.H."+i; //Name 
+    da["entry.1696159737"] = "A.H. att. "+i; //Suggestions
+    da["entry.879531967"] = "ah"+i+"@berea.edu"; //Email
     i-=1;
-    da["pageHistory"] = "0,1,2";
+    da["pageHistory"] = "0";
 
     $.ajax({
-      url: "https://docs.google.com/forms/d/e/1FAIpQLSdoiLgQamHtZ3mzaGOWllsW891_6X6crIdQy0L0FuQ1Vv9Ahg/formResponse",
+      url: "https://docs.google.com/forms/d/e/1FAIpQLSdjKDqc_Z8eR2K4YJlI-cR8j7HE_yZGZn_2qM5WTqEE8Bku9g/formResponse",
       type: "post",
       data: da,
       success: function(data) {}
